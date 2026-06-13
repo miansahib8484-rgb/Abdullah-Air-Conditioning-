@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Priority pages for crawling
+Allow: /index.html
+Allow: /services.html
+Allow: /about.html
+Allow: /blog.html
+Allow: /contact.html
+Allow: /css/
+Allow: /js/
+
+# Sitemap
+Sitemap: https://abdullahairconditioning.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

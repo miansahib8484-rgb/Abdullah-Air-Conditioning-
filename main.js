@@ -133,13 +133,30 @@ if (heroBg) {
   }, { passive: true });
 }
 
-/* ── Float WA hide near footer ── */
+/* ── Float WA: hide in hero + footer, show elsewhere ── */
 const floatWa = document.querySelector('.float-wa');
+const heroEl  = document.getElementById('hero');
 const footerEl = document.querySelector('footer');
-if (floatWa && footerEl) {
+
+function setFloatWa(show) {
+  if (!floatWa) return;
+  floatWa.style.opacity = show ? '1' : '0';
+  floatWa.style.pointerEvents = show ? 'auto' : 'none';
+}
+
+// Start hidden if hero exists (home page)
+if (heroEl) { setFloatWa(false); }
+else { setFloatWa(true); }
+
+if (heroEl) {
   new IntersectionObserver(([e]) => {
-    floatWa.style.opacity = e.isIntersecting ? '0' : '1';
-    floatWa.style.pointerEvents = e.isIntersecting ? 'none' : 'auto';
+    setFloatWa(!e.isIntersecting);
+  }, { threshold: 0.1 }).observe(heroEl);
+}
+if (footerEl) {
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) setFloatWa(false);
+    else if (!heroEl || !heroEl.getBoundingClientRect().top < window.innerHeight) setFloatWa(true);
   }).observe(footerEl);
 }
 

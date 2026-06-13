@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- الصفحة الرئيسية — Home -->
+  <url>
+    <loc>https://abdullahairconditioning.com/</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/"/>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200</image:loc>
+      <image:title>صيانة مكيفات الرياض — Abdullah Air Conditioning Riyadh</image:title>
+      <image:caption>شركة عبدالله لتكييف الهواء — فني مكيفات معتمد بالرياض</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحة الخدمات — Services -->
+  <url>
+    <loc>https://abdullahairconditioning.com/services.html</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/services.html"/>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200</image:loc>
+      <image:title>تصليح مكيفات سبليت بالرياض — AC Repair Riyadh</image:title>
+    </image:image>
+  </url>
+
+  <!-- من نحن — About -->
+  <url>
+    <loc>https://abdullahairconditioning.com/about.html</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/about.html"/>
+  </url>
+
+  <!-- المدونة — Blog -->
+  <url>
+    <loc>https://abdullahairconditioning.com/blog.html</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/blog.html"/>
+  </url>
+
+  <!-- تواصل معنا — Contact -->
+  <url>
+    <loc>https://abdullahairconditioning.com/contact.html</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/contact.html"/>
+  </url>
+
+</urlset>
