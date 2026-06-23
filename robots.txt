@@ -1,17 +1,18 @@
 User-agent: *
 Allow: /
 
-# Priority pages for crawling
-Allow: /index.html
-Allow: /services.html
-Allow: /about.html
-Allow: /blog.html
-Allow: /contact.html
-Allow: /css/
-Allow: /js/
+Disallow: /cdn-cgi/
+Disallow: /tmp/
 
-# Sitemap
+# Block internal API/config paths
+Disallow: /.vercel/
+Disallow: /api/
+
 Sitemap: https://abdullahairconditioning.com/sitemap.xml
 
-# Crawl delay
-Crawl-delay: 1
+# Crawl-delay for bots (optional, Googlebot ignores)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

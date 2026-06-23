@@ -3,63 +3,157 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- الصفحة الرئيسية — Home -->
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://abdullahairconditioning.com/</loc>
-    <lastmod>2025-06-09</lastmod>
+    <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abdullahairconditioning.com/"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://abdullahairconditioning.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abdullahairconditioning.com/"/>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200</image:loc>
-      <image:title>صيانة مكيفات الرياض — Abdullah Air Conditioning Riyadh</image:title>
-      <image:caption>شركة عبدالله لتكييف الهواء — فني مكيفات معتمد بالرياض</image:caption>
+      <image:loc>https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&amp;q=85</image:loc>
+      <image:title>شركة عبدالله لتكييف الهواء — أفضل شركة صيانة مكيفات بالرياض منذ 2009</image:title>
+      <image:caption>فني صيانة مكيفات معتمد يقوم بإصلاح مكيف سبليت في منزل بالرياض</image:caption>
+      <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
     </image:image>
   </url>
 
-  <!-- صفحة الخدمات — Services -->
+  <!-- SERVICES PAGE -->
   <url>
-    <loc>https://abdullahairconditioning.com/services.html</loc>
-    <lastmod>2025-06-09</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://abdullahairconditioning.com/services</loc>
+    <lastmod>2025-06-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/services.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abdullahairconditioning.com/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abdullahairconditioning.com/services"/>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200</image:loc>
-      <image:title>تصليح مكيفات سبليت بالرياض — AC Repair Riyadh</image:title>
+      <image:loc>https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&amp;q=85</image:loc>
+      <image:title>خدمات صيانة مكيفات وأجهزة منزلية بالرياض — عبدالله لتكييف الهواء</image:title>
+      <image:caption>فني متخصص في تركيب وصيانة مكيفات سبليت في الرياض</image:caption>
     </image:image>
   </url>
 
-  <!-- من نحن — About -->
+  <!-- ABOUT PAGE -->
   <url>
-    <loc>https://abdullahairconditioning.com/about.html</loc>
-    <lastmod>2025-06-09</lastmod>
+    <loc>https://abdullahairconditioning.com/about</loc>
+    <lastmod>2025-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abdullahairconditioning.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abdullahairconditioning.com/about"/>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&amp;q=85</image:loc>
+      <image:title>فريق شركة عبدالله لتكييف الهواء — الرياض منذ 2009</image:title>
+      <image:caption>فريق شركة عبدالله لتكييف الهواء المعتمد من SASO</image:caption>
+    </image:image>
+  </url>
+
+  <!-- BLOG LISTING -->
+  <url>
+    <loc>https://abdullahairconditioning.com/blog</loc>
+    <lastmod>2025-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abdullahairconditioning.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abdullahairconditioning.com/blog"/>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&amp;q=85</image:loc>
+      <image:title>مدونة نصائح صيانة المكيفات والأجهزة المنزلية — عبدالله لتكييف الهواء</image:title>
+      <image:caption>نصائح خبراء صيانة المكيفات بالرياض</image:caption>
+    </image:image>
+  </url>
+
+  <!-- BLOG ARTICLES (individual — to be created) -->
+  <url>
+    <loc>https://abdullahairconditioning.com/blog/clean-your-ac-at-home</loc>
+    <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/about.html"/>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&amp;q=80</image:loc>
+      <image:title>كيف تنظف مكيفك في المنزل — دليل خطوة بخطوة</image:title>
+      <image:caption>فني يقوم بتنظيف مكيف سبليت في منزل بالرياض</image:caption>
+    </image:image>
   </url>
-
-  <!-- المدونة — Blog -->
   <url>
-    <loc>https://abdullahairconditioning.com/blog.html</loc>
-    <lastmod>2025-06-09</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://abdullahairconditioning.com/blog/ac-needs-urgent-repair</loc>
+    <lastmod>2025-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&amp;q=80</image:loc>
+      <image:title>7 علامات تقول إن مكيفك يحتاج صيانة عاجلة</image:title>
+      <image:caption>علامات عطل المكيف التي تستدعي التدخل الفوري</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://abdullahairconditioning.com/blog/r22-r32-r410a-refrigerant-guide</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&amp;q=80</image:loc>
+      <image:title>الفرق بين غاز R22 و R32 و R410A — دليل أنواع فريون المكيفات</image:title>
+      <image:caption>فني يشحن غاز فريون في مكيف سبليت بالرياض</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://abdullahairconditioning.com/blog/reduce-electricity-bill-summer</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&amp;q=80</image:loc>
+      <image:title>كيف تقلل فاتورة الكهرباء 30% في الصيف</image:title>
+      <image:caption>نصائح توفير الكهرباء في الرياض من خبراء التكييف</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://abdullahairconditioning.com/blog/washing-machine-repair-or-replace</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/blog.html"/>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&amp;q=80</image:loc>
+      <image:title>متى تصلح غسالتك ومتى تستبدلها — دليل القرار</image:title>
+      <image:caption>فني يصلح غسالة اتوماتيك في الرياض</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://abdullahairconditioning.com/blog/annual-ac-maintenance-contract-worth-it</loc>
+    <lastmod>2024-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&amp;q=80</image:loc>
+      <image:title>عقد صيانة سنوي للمكيفات — هل يستحق؟</image:title>
+      <image:caption>عقد صيانة مكيفات سنوي للمنازل والشركات بالرياض</image:caption>
+    </image:image>
   </url>
 
-  <!-- تواصل معنا — Contact -->
+  <!-- CONTACT PAGE -->
   <url>
-    <loc>https://abdullahairconditioning.com/contact.html</loc>
-    <lastmod>2025-06-09</lastmod>
+    <loc>https://abdullahairconditioning.com/contact</loc>
+    <lastmod>2025-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://abdullahairconditioning.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://abdullahairconditioning.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://abdullahairconditioning.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abdullahairconditioning.com/contact"/>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&amp;q=85</image:loc>
+      <image:title>تواصل مع شركة عبدالله لتكييف الهواء — الرياض</image:title>
+      <image:caption>فريق خدمة عملاء شركة عبدالله لتكييف الهواء — متاح 24 ساعة</image:caption>
+    </image:image>
+  </url>
+
+  <!-- PRIVACY PAGE (to be created) -->
+  <url>
+    <loc>https://abdullahairconditioning.com/privacy</loc>
+    <lastmod>2025-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
 
 </urlset>

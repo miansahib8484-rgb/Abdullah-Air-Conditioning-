@@ -1,170 +1,196 @@
-/* ═══════════════════════════════════════
-   ABDULLAH AIR CONDITIONING — main.js
-═══════════════════════════════════════ */
+/* =========================================================
+   Abdullah Air Conditioning — main.js
+   Updated: 2025 | All rights reserved
+   ========================================================= */
+
+'use strict';
 
 /* ── Navbar scroll shadow ── */
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
-}, { passive: true });
+if (navbar) {
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
-/* ── Mobile drawer ── */
-(function () {
-  const burger  = document.getElementById('hamburger');
-  const drawer  = document.getElementById('mobileDrawer');
-  const backdrop = document.getElementById('drawerBackdrop');
-  const closeBtn = document.getElementById('drawerClose');
-  if (!burger || !drawer) return;
+/* ── Mobile Drawer ── */
+const hamburger  = document.getElementById('hamburger');
+const drawer     = document.getElementById('mobileDrawer');
+const backdrop   = document.getElementById('drawerBackdrop');
+const closeBtn   = document.getElementById('drawerClose');
 
-  function open() {
-    drawer.classList.add('open');
-    burger.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function close() {
-    drawer.classList.remove('open');
-    burger.classList.remove('open');
-    document.body.style.overflow = '';
-  }
+function openDrawer() {
+  if (!drawer) return;
+  drawer.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  hamburger && hamburger.setAttribute('aria-expanded', 'true');
+}
+function closeDrawer() {
+  if (!drawer) return;
+  drawer.classList.remove('open');
+  document.body.style.overflow = '';
+  hamburger && hamburger.setAttribute('aria-expanded', 'false');
+}
 
-  burger.addEventListener('click', () => drawer.classList.contains('open') ? close() : open());
-  if (backdrop) backdrop.addEventListener('click', close);
-  if (closeBtn) closeBtn.addEventListener('click', close);
-  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', close));
-  document.addEventListener('keydown', e => e.key === 'Escape' && close());
-})();
+hamburger  && hamburger.addEventListener('click', openDrawer);
+closeBtn   && closeBtn.addEventListener('click', closeDrawer);
+backdrop   && backdrop.addEventListener('click', closeDrawer);
 
-/* ── Scroll reveal ── */
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const d = parseInt(e.target.dataset.delay) || 0;
-    setTimeout(() => e.target.classList.add('in-view'), d);
-    revealObs.unobserve(e.target);
+/* Keyboard support */
+[hamburger, closeBtn].forEach(el => {
+  el && el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
   });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('[data-animate]').forEach(el => revealObs.observe(el));
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeDrawer();
+});
 
-/* ── Count-up helper ── */
-function countUp(el, target, suffix, decimal) {
-  const steps = 60, dur = 2000;
-  let cur = 0;
-  const inc = target / steps;
-  const t = setInterval(() => {
-    cur = Math.min(cur + inc, target);
-    el.textContent = (decimal ? cur.toFixed(decimal) : Math.floor(cur).toLocaleString()) + suffix;
-    if (cur >= target) clearInterval(t);
-  }, dur / steps);
+/* ── Intersection Observer: Animate on scroll ── */
+const animEls = document.querySelectorAll('[data-animate]');
+if (animEls.length && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = parseInt(el.dataset.delay || 0, 10);
+        setTimeout(() => el.classList.add('animated'), delay);
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12 });
+  animEls.forEach(el => io.observe(el));
 }
 
-/* ── Trust strip count-up ── */
-const trustEl = document.querySelector('.trust-strip-inner');
-if (trustEl) {
-  new IntersectionObserver(entries => {
-    if (!entries[0].isIntersecting) return;
-    trustEl.querySelectorAll('.trust-item').forEach(item => {
-      const el = item.querySelector('.count-up');
-      if (el) countUp(el, parseFloat(item.dataset.count || 0), item.dataset.suffix || '', parseInt(item.dataset.decimal || 0));
-    });
-  }, { threshold: 0.4 }).observe(trustEl);
+/* ── Count-up animation ── */
+function animateCount(el, target, suffix, decimals) {
+  const duration = 1800;
+  const start = performance.now();
+  const isFloat = decimals > 0;
+
+  function update(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const current = isFloat ? (target * ease).toFixed(decimals) : Math.floor(target * ease);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = (isFloat ? target.toFixed(decimals) : target) + suffix;
+  }
+  requestAnimationFrame(update);
 }
 
-/* ── Stats count-up + bars ── */
-const statsGrid = document.querySelector('.stats-grid');
-if (statsGrid) {
-  new IntersectionObserver(entries => {
-    if (!entries[0].isIntersecting) return;
-    statsGrid.querySelectorAll('.stat-num[data-count]').forEach(el => {
-      countUp(el, parseFloat(el.dataset.count), el.dataset.suffix || '', parseInt(el.dataset.decimal || 0));
+function initCounters(parent) {
+  (parent || document).querySelectorAll('[data-count]').forEach(el => {
+    const target   = parseFloat(el.dataset.count);
+    const suffix   = el.dataset.suffix || '';
+    const decimals = parseInt(el.dataset.decimal || 0, 10);
+    animateCount(el, target, suffix, decimals);
+  });
+}
+
+/* Trigger counters when trust strip / stats enter viewport */
+const counterSections = document.querySelectorAll('.trust-strip, .stats-section');
+if (counterSections.length && 'IntersectionObserver' in window) {
+  const co = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        initCounters(entry.target);
+        co.unobserve(entry.target);
+      }
     });
-    setTimeout(() => {
-      statsGrid.querySelectorAll('.stat-bar-fill').forEach(b => b.classList.add('animated'));
-    }, 300);
-  }, { threshold: 0.2 }).observe(statsGrid);
+  }, { threshold: 0.3 });
+  counterSections.forEach(s => co.observe(s));
+}
+
+/* ── Stat bar animation ── */
+const statBars = document.querySelectorAll('.stat-bar-fill');
+if (statBars.length && 'IntersectionObserver' in window) {
+  const bo = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.width = 'var(--w)';
+        bo.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  statBars.forEach(b => bo.observe(b));
 }
 
 /* ── FAQ accordion ── */
-function toggleFaq(el) {
-  const item = el.closest('.faq-item');
-  const open = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!open) item.classList.add('open');
-}
+window.toggleFaq = function(btn) {
+  const item = btn.closest('.faq-item');
+  const answer = item.querySelector('.faq-a');
+  const icon = btn.querySelector('.faq-icon');
+  const isOpen = item.classList.contains('open');
 
-/* ── Blog filter ── */
-function filterCat(el, cat) {
-  document.querySelectorAll('.bcat-pill').forEach(p => p.classList.remove('active'));
-  el.classList.add('active');
-  document.querySelectorAll('#blogGrid .blog-card').forEach(c => {
-    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+  /* Close all open items */
+  document.querySelectorAll('.faq-item.open').forEach(openItem => {
+    openItem.classList.remove('open');
+    const a = openItem.querySelector('.faq-a');
+    const ic = openItem.querySelector('.faq-icon');
+    if (a) a.style.maxHeight = '0';
+    if (ic) ic.textContent = '+';
+    openItem.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
   });
-}
-const bsearch = document.getElementById('blogSearch');
-if (bsearch) bsearch.addEventListener('input', function () {
-  const q = this.value.toLowerCase();
-  document.querySelectorAll('#blogGrid .blog-card').forEach(c => {
-    c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none';
+
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    icon.textContent = '−';
+    btn.setAttribute('aria-expanded', 'true');
+  }
+};
+
+/* ── Smooth scroll for anchor links ── */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
-/* ── Contact form → WhatsApp ── */
-function submitContactForm(e) {
-  e.preventDefault();
-  const f = e.target;
-  const g = n => (f.querySelector(`[name="${n}"]`) || {}).value || '';
-  const msg =
-    `Hello Abdullah Air Conditioning!\n\n*New Service Booking*\n\n` +
-    `Name: ${g('name')}\nPhone: ${g('phone')}\nService: ${g('service')}\n` +
-    `Date: ${g('date') || 'Flexible'}\nTime: ${g('time')}\n` +
-    `District: ${g('district')}\nAddress: ${g('address')}\nDetails: ${g('message') || 'N/A'}\n\nPlease confirm. Thank you!`;
-  const url = `https://wa.me/966598938818?text=${encodeURIComponent(msg)}`;
-  const btn = document.getElementById('waSubmitBtn');
-  if (btn) btn.href = url;
-  window.open(url, '_blank');
-  const box = document.getElementById('success-box');
-  if (box) { box.style.display = 'block'; setTimeout(() => (box.style.display = 'none'), 7000); }
-}
+/* ── Newsletter subscribe (placeholder) ── */
+document.querySelectorAll('.nl-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const input = btn.closest('.nl-row, .nl-section')?.querySelector('.nl-input');
+    if (!input) return;
+    const email = input.value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      input.style.borderColor = '#E85D04';
+      input.placeholder = 'أدخل بريداً إلكترونياً صحيحاً';
+      return;
+    }
+    input.style.borderColor = '#00C2B5';
+    input.value = '';
+    btn.textContent = '✅ تم!';
+    setTimeout(() => { btn.textContent = 'اشترك'; }, 3000);
+  });
+});
 
-/* ── Hero parallax ── */
-const heroBg = document.querySelector('.hero-bg-img img');
-if (heroBg) {
-  window.addEventListener('scroll', () => {
-    heroBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
-  }, { passive: true });
-}
+/* ── Active nav link highlight ── */
+(function setActiveLink() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  document.querySelectorAll('.nav-link, .drawer-link').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === path || (href !== '/' && path.startsWith(href))) {
+      a.classList.add('active');
+    }
+  });
+})();
 
-/* ── Float WA: hide in hero + footer, show elsewhere ── */
-const floatWa = document.querySelector('.float-wa');
-const heroEl  = document.getElementById('hero');
-const footerEl = document.querySelector('footer');
-
-function setFloatWa(show) {
-  if (!floatWa) return;
-  floatWa.style.opacity = show ? '1' : '0';
-  floatWa.style.pointerEvents = show ? 'auto' : 'none';
-}
-
-// Start hidden if hero exists (home page)
-if (heroEl) { setFloatWa(false); }
-else { setFloatWa(true); }
-
-if (heroEl) {
-  new IntersectionObserver(([e]) => {
-    setFloatWa(!e.isIntersecting);
-  }, { threshold: 0.1 }).observe(heroEl);
-}
-if (footerEl) {
-  new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) setFloatWa(false);
-    else if (!heroEl || !heroEl.getBoundingClientRect().top < window.innerHeight) setFloatWa(true);
-  }).observe(footerEl);
-}
-
-/* ── Mark active nav link ── */
-const pg = location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-link, .drawer-link').forEach(a => {
-  const h = a.getAttribute('href') || '';
-  if (h === pg || (pg === '' && h === 'index.html') || (pg === 'index.html' && h === 'index.html'))
-    a.classList.add('active');
-  else a.classList.remove('active');
+/* ── Simple performance: preload WhatsApp link on hover ── */
+const waLinks = document.querySelectorAll('a[href^="https://wa.me"]');
+waLinks.forEach(link => {
+  link.addEventListener('mouseover', () => {
+    const rel = link.rel || '';
+    if (!rel.includes('prefetch')) {
+      const prefetch = document.createElement('link');
+      prefetch.rel = 'prefetch';
+      prefetch.href = link.href;
+      document.head.appendChild(prefetch);
+    }
+  }, { once: true });
 });
