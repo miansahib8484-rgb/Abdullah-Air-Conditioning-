@@ -5,35 +5,123 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options",  "value": "nosniff" },
-        { "key": "X-Frame-Options",         "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection",        "value": "1; mode=block" },
-        { "key": "Referrer-Policy",         "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy",      "value": "camera=(), microphone=(), geolocation=(self)" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(self)"
+        }
       ]
     },
     {
       "source": "/style.css",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/main.js",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ],
   "redirects": [
-    { "source": "/index",                               "destination": "/",                                              "permanent": true },
-    { "source": "/index.html",                          "destination": "/",                                              "permanent": true },
-    { "source": "/services.html",                       "destination": "/services",                                      "permanent": true },
-    { "source": "/about.html",                          "destination": "/about",                                         "permanent": true },
-    { "source": "/blog.html",                           "destination": "/blog",                                          "permanent": true },
-    { "source": "/contact.html",                        "destination": "/contact",                                       "permanent": true },
-    { "source": "/privacy.html",                        "destination": "/privacy",                                       "permanent": true },
-    { "source": "/blog/clean-your-ac-at-home.html",    "destination": "/blog/clean-your-ac-at-home",                   "permanent": true },
-    { "source": "/blog/ac-needs-urgent-repair.html",   "destination": "/blog/ac-needs-urgent-repair",                  "permanent": true },
-    { "source": "/blog/r22-r32-r410a-refrigerant-guide.html","destination": "/blog/r22-r32-r410a-refrigerant-guide",   "permanent": true },
-    { "source": "/blog/reduce-electricity-bill-summer.html","destination": "/blog/reduce-electricity-bill-summer",      "permanent": true },
-    { "source": "/blog/washing-machine-repair-or-replace.html","destination": "/blog/washing-machine-repair-or-replace","permanent": true },
-    { "source": "/blog/annual-ac-maintenance-contract-worth-it.html","destination": "/blog/annual-ac-maintenance-contract-worth-it","permanent": true }
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "abdullahairconditioning.com"
+        }
+      ],
+      "destination": "https://www.abdullahairconditioning.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/blog/clean-your-ac-at-home.html",
+      "destination": "/blog/clean-your-ac-at-home",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ac-needs-urgent-repair.html",
+      "destination": "/blog/ac-needs-urgent-repair",
+      "permanent": true
+    },
+    {
+      "source": "/blog/r22-r32-r410a-refrigerant-guide.html",
+      "destination": "/blog/r22-r32-r410a-refrigerant-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/reduce-electricity-bill-summer.html",
+      "destination": "/blog/reduce-electricity-bill-summer",
+      "permanent": true
+    },
+    {
+      "source": "/blog/washing-machine-repair-or-replace.html",
+      "destination": "/blog/washing-machine-repair-or-replace",
+      "permanent": true
+    },
+    {
+      "source": "/blog/annual-ac-maintenance-contract-worth-it.html",
+      "destination": "/blog/annual-ac-maintenance-contract-worth-it",
+      "permanent": true
+    }
   ]
 }
