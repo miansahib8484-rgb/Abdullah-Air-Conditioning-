@@ -281,7 +281,7 @@ input, select, textarea { font-family: inherit; }
 .trust-item { padding: 16px; border-right: 1px solid rgba(255,255,255,.1); }
 .trust-item:first-child { border-right: none; }
 .trust-num { font-family: var(--font-serif); font-size: 28px; color: var(--teal); font-weight: bold; }
-.trust-lbl { font-family: var(--font-arabic); font-size: 12px; color: rgba(255,255,255,.65); margin-top: 4px; }
+.trust-lbl { font-family: var(--font-arabic); font-size: 11px; font-size: 12px; color: rgba(255,255,255,.65); margin-top: 4px; }
 
 /* ── Section header ── */
 .section-header { max-width: 680px; }
@@ -426,7 +426,7 @@ input, select, textarea { font-family: inherit; }
 }
 .process-step h4 { color: white; font-weight: 700; font-size: 15px; margin-bottom: 6px; }
 .step-arabic { font-family: var(--font-arabic); font-size: 11px; color: var(--teal); margin-bottom: 8px; }
-.process-step p { font-family: var(--font-arabic); color: rgba(255,255,255,.6); font-size: 13px; line-height: 1.6; }
+.process-step p { font-family: var(--font-arabic); color: rgba(255,255,255,.88); font-size: 13px; line-height: 1.6; }
 .ps-arrow { font-size: 24px; color: rgba(0,194,181,.4); margin-top: 20px; flex-shrink: 0; }
 
 /* ── Testimonials ── */
@@ -741,8 +741,8 @@ footer { background: var(--navy); padding: 80px 0 0; }
   flex-shrink: 0;
 }
 .tbadge-icon { font-size: 22px; flex-shrink: 0; }
-.tbadge-label { font-size: 11px; color: var(--gray); font-family: var(--font-arabic); font-weight: 600; }
-.tbadge-val { font-size: 12px; color: var(--navy); font-weight: 700; }
+.tbadge-label { font-size: 11px; color: var(--navy); font-family: var(--font-arabic); font-weight: 700; }
+.tbadge-val { font-size: 11px; color: var(--teal); font-weight: 600; }
 @media(max-width:640px){ .tbadges-inner { gap: 10px; } .tbadge { padding: 8px 12px; } }
 
 /* Google Reviews Link */
@@ -977,4 +977,185 @@ footer { background: var(--navy); padding: 80px 0 0; }
   .kw-group { padding: 14px 12px; }
   .kw-pills { gap: 6px; }
   .kw-pill { font-size: 11px; padding: 5px 10px; }
+}
+
+/* ============================================================
+   KSA DESIGN UPDATES + MISSING CLASSES — August 2026
+   ============================================================ */
+
+/* SEO Content Section */
+.seo-content-section {
+  background: var(--bg-light, #f7fafc);
+  padding: 64px 0;
+}
+.seo-content-section h3 {
+  font-family: var(--font-arabic);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.seo-content-section p {
+  font-family: var(--font-arabic);
+  color: #444;
+  line-height: 1.9;
+  font-size: 0.94rem;
+}
+
+/* Topbar chips */
+.tb-loc  { font-family: var(--font-arabic); font-size: 12px; }
+.tb-chip-tel a { color: var(--teal); font-weight: 700; text-decoration: none; direction: ltr; }
+
+/* Why section content */
+.why-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Blog article tables — mobile */
+.blog-table-wrap { overflow-x: auto; margin-bottom: 32px; }
+
+/* KSA: WhatsApp CTA prominence — primary action in KSA */
+.wa-primary-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-family: var(--font-arabic);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.wa-primary-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+/* KSA: Trust badge strip */
+.ksa-trust-strip {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 20px;
+}
+.ksa-trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-arabic);
+}
+.ksa-trust-badge strong { color: #fff; }
+
+/* Inline grid responsive — 2-col to 1-col on mobile */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+.grid-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+}
+
+/* Blog sidebar sticky */
+.blog-sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+/* Blog article layout */
+.blog-article-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* KSA: Pricing transparency cards */
+.price-card {
+  background: #fff;
+  border: 1px solid #e8f4fe;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.price-card-icon { font-size: 2rem; flex-shrink: 0; }
+.price-card-body h4 {
+  font-family: var(--font-arabic);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.price-card-amount {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--teal);
+  direction: ltr;
+  display: inline-block;
+}
+
+/* KSA: Emergency band mobile */
+@media (max-width: 768px) {
+  .seo-content-section { padding: 40px 0; }
+  .grid-2col { grid-template-columns: 1fr; gap: 24px; }
+  .grid-3col { grid-template-columns: 1fr; gap: 20px; }
+  .blog-article-layout { grid-template-columns: 1fr; }
+  .blog-sidebar { position: static; }
+  .why-content { grid-template-columns: 1fr; }
+
+  /* Inline grids in SEO section — stack on mobile */
+  section [style*="grid-template-columns:1fr 1fr"],
+  section [style*="grid-template-columns: 1fr 1fr"] {
+    display: block !important;
+  }
+  section [style*="grid-template-columns:1fr 1fr"] > div,
+  section [style*="grid-template-columns: 1fr 1fr"] > div {
+    margin-bottom: 20px;
+  }
+  section [style*="grid-template-columns:1fr 1fr 1fr"],
+  section [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    display: block !important;
+  }
+  section [style*="grid-template-columns:1fr 1fr 1fr"] > div,
+  section [style*="grid-template-columns: 1fr 1fr 1fr"] > div {
+    margin-bottom: 16px;
+  }
+
+  /* Blog article tables */
+  .blog-table-wrap table { min-width: 560px; }
+
+  /* Blog article sidebar grid on mobile */
+  div[style*="grid-template-columns:1fr 320px"],
+  div[style*="grid-template-columns: 1fr 320px"],
+  div[style*="grid-template-columns:1fr 300px"],
+  div[style*="grid-template-columns: 1fr 300px"] {
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .seo-content-section { padding: 32px 0; }
+  .price-card { flex-direction: column; align-items: flex-start; }
+  .wa-primary-cta { width: 100%; justify-content: center; }
+}
+
+/* Remove dead kw-pill styles on mobile (section removed) */
+@media (max-width: 768px) {
+  .kw-section { display: none; }
 }
