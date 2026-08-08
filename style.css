@@ -297,8 +297,8 @@ input, select, textarea { font-family: inherit; }
 }
 .sec-title-white { color: white; }
 .sec-arabic {
-  font-family: var(--font-arabic); font-size: 14px;
-  color: var(--teal); margin-bottom: 14px; font-weight: 600;
+  font-family: var(--font-arabic); font-size: 16px;
+  color: var(--teal); margin-bottom: 14px; font-weight: 700;
 }
 .sec-arabic-light { color: rgba(255,255,255,.65); }
 .sec-sub { font-size: 16px; color: var(--gray); line-height: 1.75; font-family: var(--font-arabic); }
@@ -425,7 +425,7 @@ input, select, textarea { font-family: inherit; }
   display: flex; align-items: center; justify-content: center;
 }
 .process-step h4 { color: white; font-weight: 700; font-size: 15px; margin-bottom: 6px; }
-.step-arabic { font-family: var(--font-arabic); font-size: 11px; color: var(--teal); margin-bottom: 8px; }
+.step-arabic { font-family: var(--font-arabic); font-size: 13px; color: var(--teal); margin-bottom: 8px; font-weight: 600; }
 .process-step p { font-family: var(--font-arabic); color: rgba(255,255,255,.88); font-size: 13px; line-height: 1.6; }
 .ps-arrow { font-size: 24px; color: rgba(0,194,181,.4); margin-top: 20px; flex-shrink: 0; }
 
@@ -1158,4 +1158,65 @@ footer { background: var(--navy); padding: 80px 0 0; }
 /* Remove dead kw-pill styles on mobile (section removed) */
 @media (max-width: 768px) {
   .kw-section { display: none; }
+}
+
+/* ── 50/50 English-Arabic equal sizing ───────────────────── */
+.svc-arabic {
+  font-family: var(--font-arabic);
+  font-size: 13px;
+  color: var(--teal);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.stat-arabic {
+  font-family: var(--font-arabic);
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.tbadge-label {
+  font-size: 12px;
+  color: var(--navy);
+  font-family: var(--font-arabic);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.tbadge-val {
+  font-size: 11px;
+  color: var(--teal);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.trust-lbl {
+  font-family: var(--font-arabic);
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  margin-top: 4px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+/* hero-sub English line equal weight */
+.hero-sub span[style*="Plus Jakarta"] {
+  font-size: 1em !important;
+  font-weight: 500;
+  opacity: 0.92 !important;
+}
+/* why-item h3 small Arabic subtitle 50% equal */
+.why-item h3 span {
+  display: block;
+  font-family: var(--font-arabic);
+  font-size: 0.82em;
+  color: var(--teal);
+  margin-top: 4px;
+  font-weight: 600;
+}
+/* process-step h3 Arabic subtitle */
+.process-step h3 span {
+  display: block;
+  font-family: var(--font-arabic);
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.75);
+  margin-top: 3px;
+  font-weight: 500;
 }
