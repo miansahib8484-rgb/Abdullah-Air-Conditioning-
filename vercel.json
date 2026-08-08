@@ -122,6 +122,21 @@
       "source": "/blog/annual-ac-maintenance-contract-worth-it.html",
       "destination": "/blog/annual-ac-maintenance-contract-worth-it",
       "permanent": true
+    },
+    {
+      "source": "/blog/ac-error-codes-riyadh.html",
+      "destination": "/blog/ac-error-codes-riyadh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ac-not-cooling-riyadh.html",
+      "destination": "/blog/ac-not-cooling-riyadh",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ac-cleaning-guide-riyadh.html",
+      "destination": "/blog/ac-cleaning-guide-riyadh",
+      "permanent": true
     }
   ]
 }
