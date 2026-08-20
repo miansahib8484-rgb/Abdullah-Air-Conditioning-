@@ -1155,10 +1155,7 @@ footer { background: var(--navy); padding: 80px 0 0; }
   .wa-primary-cta { width: 100%; justify-content: center; }
 }
 
-/* Remove dead kw-pill styles on mobile (section removed) */
-@media (max-width: 768px) {
-  .kw-section { display: none; }
-}
+/* kw-section now contains live on-page keyword content — must stay visible on mobile */
 
 /* ── 50/50 English-Arabic equal sizing ───────────────────── */
 .svc-arabic {
