@@ -6,13 +6,13 @@
   <!-- HOMEPAGE -->
   <url>
     <loc>https://www.abdullahairconditioning.com/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&amp;q=85</image:loc>
-      <image:title>شركة عبدالله لتكييف الهواء — أفضل شركة صيانة مكيفات بالرياض منذ 2009</image:title>
-      <image:caption>فني صيانة مكيفات معتمد يقوم بإصلاح مكيف سبليت في منزل بالرياض</image:caption>
+      <image:title>Abdullah Air Conditioning: Www.Abdullahairconditioning.Com</image:title>
+      <image:caption>Certified AC technician at work in a Riyadh home</image:caption>
       <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
     </image:image>
   </url>
@@ -20,135 +20,62 @@
   <!-- SERVICES PAGE -->
   <url>
     <loc>https://www.abdullahairconditioning.com/services</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://www.abdullahairconditioning.com/services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.abdullahairconditioning.com/services"/>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&amp;q=85</image:loc>
-      <image:title>خدمات صيانة مكيفات وأجهزة منزلية بالرياض — عبدالله لتكييف الهواء</image:title>
-      <image:caption>فني متخصص في تركيب وصيانة مكيفات سبليت في الرياض</image:caption>
+      <image:title>Abdullah Air Conditioning: AC and appliance repair services in Riyadh</image:title>
+      <image:caption>Certified AC technician at work in a Riyadh home</image:caption>
     </image:image>
   </url>
 
   <!-- ABOUT PAGE -->
   <url>
     <loc>https://www.abdullahairconditioning.com/about</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://www.abdullahairconditioning.com/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.abdullahairconditioning.com/about"/>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&amp;q=85</image:loc>
-      <image:title>فريق شركة عبدالله لتكييف الهواء — الرياض منذ 2009</image:title>
-      <image:caption>فريق شركة عبدالله لتكييف الهواء المعتمد من SASO</image:caption>
+      <image:title>Abdullah Air Conditioning: The Abdullah Air Conditioning team, Riyadh since 2009</image:title>
+      <image:caption>Certified AC technician at work in a Riyadh home</image:caption>
     </image:image>
   </url>
 
   <!-- BLOG LISTING -->
   <url>
     <loc>https://www.abdullahairconditioning.com/blog</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://www.abdullahairconditioning.com/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.abdullahairconditioning.com/blog"/>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&amp;q=85</image:loc>
-      <image:title>مدونة نصائح صيانة المكيفات والأجهزة المنزلية — عبدالله لتكييف الهواء</image:title>
-      <image:caption>نصائح خبراء صيانة المكيفات بالرياض</image:caption>
+      <image:title>Abdullah Air Conditioning: AC repair tips and guides for Riyadh homes</image:title>
+      <image:caption>Certified AC technician at work in a Riyadh home</image:caption>
     </image:image>
   </url>
-
-  <!-- BLOG ARTICLES (individual — to be created) -->
-  <url>
-    <loc>https://www.abdullahairconditioning.com/blog/clean-your-ac-at-home</loc>
-    <lastmod>2025-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&amp;q=80</image:loc>
-      <image:title>كيف تنظف مكيفك في المنزل — دليل خطوة بخطوة</image:title>
-      <image:caption>فني يقوم بتنظيف مكيف سبليت في منزل بالرياض</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.abdullahairconditioning.com/blog/ac-needs-urgent-repair</loc>
-    <lastmod>2025-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&amp;q=80</image:loc>
-      <image:title>7 علامات تقول إن مكيفك يحتاج صيانة عاجلة</image:title>
-      <image:caption>علامات عطل المكيف التي تستدعي التدخل الفوري</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.abdullahairconditioning.com/blog/r22-r32-r410a-refrigerant-guide</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&amp;q=80</image:loc>
-      <image:title>الفرق بين غاز R22 و R32 و R410A — دليل أنواع فريون المكيفات</image:title>
-      <image:caption>فني يشحن غاز فريون في مكيف سبليت بالرياض</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.abdullahairconditioning.com/blog/reduce-electricity-bill-summer</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&amp;q=80</image:loc>
-      <image:title>كيف تقلل فاتورة الكهرباء 30% في الصيف</image:title>
-      <image:caption>نصائح توفير الكهرباء في الرياض من خبراء التكييف</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.abdullahairconditioning.com/blog/washing-machine-repair-or-replace</loc>
-    <lastmod>2024-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&amp;q=80</image:loc>
-      <image:title>متى تصلح غسالتك ومتى تستبدلها — دليل القرار</image:title>
-      <image:caption>فني يصلح غسالة اتوماتيك في الرياض</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.abdullahairconditioning.com/blog/annual-ac-maintenance-contract-worth-it</loc>
-    <lastmod>2024-11-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&amp;q=80</image:loc>
-      <image:title>عقد صيانة سنوي للمكيفات — هل يستحق؟</image:title>
-      <image:caption>عقد صيانة مكيفات سنوي للمنازل والشركات بالرياض</image:caption>
-    </image:image>
-  </url>
-
   <!-- CONTACT PAGE -->
   <url>
     <loc>https://www.abdullahairconditioning.com/contact</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="ar-SA" href="https://www.abdullahairconditioning.com/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.abdullahairconditioning.com/contact"/>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&amp;q=85</image:loc>
-      <image:title>تواصل مع شركة عبدالله لتكييف الهواء — الرياض</image:title>
-      <image:caption>فريق خدمة عملاء شركة عبدالله لتكييف الهواء — متاح 24 ساعة</image:caption>
+      <image:title>Abdullah Air Conditioning: Contact Abdullah Air Conditioning in Riyadh</image:title>
+      <image:caption>Certified AC technician at work in a Riyadh home</image:caption>
     </image:image>
   </url>
 
   <!-- PRIVACY PAGE (to be created) -->
   <url>
     <loc>https://www.abdullahairconditioning.com/privacy</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
@@ -156,38 +83,60 @@
 
   <url>
     <loc>https://www.abdullahairconditioning.com/blog/ac-repair-cost-riyadh</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.abdullahairconditioning.com/blog/ac-error-codes-riyadh</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.abdullahairconditioning.com/blog/ac-not-cooling-riyadh</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.abdullahairconditioning.com/blog/ac-cleaning-guide-riyadh</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.abdullahairconditioning.com/blog/emergency-ac-repair-riyadh</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.abdullahairconditioning.com/blog/fridge-repair-riyadh</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- WASHING MACHINE REPAIR GUIDE -->
+  <url>
+    <loc>https://www.abdullahairconditioning.com/blog/washing-machine-repair-riyadh</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abdullahairconditioning.com/warranty-and-pricing</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abdullahairconditioning.com/editorial-policy</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
